@@ -1,0 +1,110 @@
+html, body {
+    margin: 0;
+    background-size: cover;
+    background-color: #141414;
+    color: white;
+    font-family: Arial;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.heading {
+  text-align: center;
+  font-size: 25px;
+  animation: 1.2s ease-out 0s 1 slideInFromLeft;
+  margin-top: 3%;
+  color: gray;
+}
+header {
+    text-align: center;
+    margin-top: 5%;
+    animation: 1.2s ease-out 0s 1 slideInFromLeft;
+}
+
+h1 {
+    font-size: 60px;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+h2 {
+    font-size: 35px;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+.upper {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.quart {
+    width: 25%;
+}
+
+.half {
+     width: 50%;   
+}
+
+.container {
+    width: 800px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 1fr;
+    grid-gap: 15px;
+  }
+
+  .items {
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-gap: 10px;
+    cursor: pointer;
+    border: 3px dotted gray;
+    transition: all 2s;
+  }
+  
+  .icon-wrapper, .project-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-wrapper i {
+    font-size: 100px;
+    color: #E5E6F1;
+    transform: translateY(0px);
+    transition: all 1.5s;
+  }
+  
+  .icon-wrapper {
+    align-self: end;
+  }
+
+  .items:hover {
+    border: 3px solid #E5E6F1;
+  }
+  .items:hover .project-name p {
+    transform: translateY(-10px);
+    transition: all 1s;
+  }
+  .items:hover .icon-wrapper i {
+    transform: translateY(5px);
+    transition: all 2s;
+  }
+  a {
+      text-decoration: none;
+      color: inherit;
+      all: unset;
+  }
